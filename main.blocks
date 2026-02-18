@@ -1,0 +1,114 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="zt%P)MiR0!xPc8lYt#qx">ball</variable><variable id="OxCpRx)RT2!!Q$mhx~3G">paddle1</variable><variable id="@IQ3P~,h)~0]Pu:7QEPP">paddle2</variable><variable id="78WSq-Nr--kp%LxYUEU`">player2Score</variable><variable id="jMM@?DYeWuN,z$.1YsBN">player1Score</variable><variable type="KIND_SpriteKind" id=".4ZS9vp`fJ0N[6+x[LBn">Player</variable><variable type="KIND_SpriteKind" id="r`c-?{B5_$I8.N8j]2(/">Projectile</variable><variable type="KIND_SpriteKind" id="kg:LIatJonL}RUw9z3,E">Food</variable><variable type="KIND_SpriteKind" id="G%i2pqbPMq4yDM{fhWO1">Enemy</variable></variables><comment id="t3a]pFx3~V-WJ^8H$Q8L" x="1876" y="797" w="460" h="360">
+Pong Game To-Do List
+
+Step 1: Start Your Game
+
+☐ Open MakeCode Arcade
+
+☐ Click New Project
+
+☐ Name it Multiplayer Pong
+
+Step 2: Make Paddle 1
+
+☐ Create a new sprite
+
+☐ Make it tall like a paddle
+
+☐ Put it on the left side of the screen
+
+☐ Make sure it stays in the screen
+
+Step 3: Make Paddle 2
+
+☐ Create another sprite
+
+☐ Make it tall like a paddle
+
+☐ Put it on the right side of the screen
+
+☐ Make sure it stays in the screen
+
+Step 4: Make the Ball
+
+☐ Create a small square sprite
+
+☐ Put it in the middle of the screen
+
+☐ Make it move using velocity
+
+☐ Make it bounce off walls
+
+Step 5: Add Controls
+
+Player 1
+
+☐ Move paddle up
+
+☐ Move paddle down
+
+Player 2
+
+☐ Move paddle up
+
+☐ Move paddle down
+
+Step 6: Make the Ball Bounce
+
+☐ Detect when the ball touches a paddle
+
+☐ Reverse the ball's X direction
+
+(Hint: Use set velocity block)
+
+Step 7: Add Scoring
+
+☐ Detect when the ball goes off the left side
+
+☐ Give Player 2 a point
+
+☐ Detect when the ball goes off the right side
+
+☐ Give Player 1 a point
+
+Step 8: Reset the Ball
+
+☐ Destroy the old ball
+
+☐ Create a new one in the middle
+
+Step 9: Test Your Game!
+
+☐ Do paddles move?
+
+☐ Does the ball bounce?
+
+☐ Does scoring work?
+</comment><block type="pxt-on-start" id="8ZRmV%8j{;@Di6zEv{u!" x="0" y="0"><statement name="HANDLER"><block type="variables_set" id="|.iDIaw$Wl{s%X7BG==C"><field name="VAR" id="OxCpRx)RT2!!Q$mhx~3G">paddle1</field><comment pinned="false" h="80" w="160">Create paddles</comment><value name="VALUE"><shadow type="math_number" id="BD$`e_IJiSkC*.:miRcV"><field name="NUM">0</field></shadow><block type="spritescreate" id="o+JP/uX.k$kt8j]+6.py"><value name="img"><shadow type="screen_image_picker" id="Wy1+sQ/%+j]tq7it57Lq"><field name="img">img`
+. . 5 5 . . 
+. . 5 5 . . 
+. . 5 5 . . 
+. . 5 5 . . 
+. . 5 5 . . 
+. . 5 5 . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="AnXu,]MzTyM^a#+Tv)?H"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="spritesetpos" id="M7!;X?1(#ei:guURN@E7"><value name="sprite"><block type="variables_get" id="LD[[;y%phbP+KvPbumv0"><field name="VAR" id="OxCpRx)RT2!!Q$mhx~3G">paddle1</field></block></value><value name="x"><shadow type="positionPicker" id="Cr#cSG-i3#(`RSUh6q)B"><field name="index">10</field></shadow></value><value name="y"><shadow type="positionPicker" id="=(hr2ov)Z_rOli8eoLpy"><field name="index">60</field></shadow></value><next><block type="spritesetsetstayinscreen" id="[:NULZVx(XIv:TW)U3@T"><value name="sprite"><block type="variables_get" id="i{0XL?mOA_@4sQ/ZDSgD"><field name="VAR" id="OxCpRx)RT2!!Q$mhx~3G">paddle1</field></block></value><value name="on"><shadow type="toggleOnOff" id="qm@Z(6WHoHw.KF)jFr`]"><field name="on">true</field></shadow></value><next><block type="variables_set" id="iZ=GMt(rpC/C2:yeE(x^"><field name="VAR" id="@IQ3P~,h)~0]Pu:7QEPP">paddle2</field><value name="VALUE"><shadow type="math_number" id=";ullef#$d==9Sn?1;bHb"><field name="NUM">0</field></shadow><block type="spritescreate" id="PW]|H#7{,SbI;%[ROD/:"><value name="img"><shadow type="screen_image_picker" id="KjB]8BGFi$Ggw{aqP`V?"><field name="img">img`
+. . 9 9 . . 
+. . 9 9 . . 
+. . 9 9 . . 
+. . 9 9 . . 
+. . 9 9 . . 
+. . 9 9 . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="lOpG{)TsUq-l,OqE;nhq"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="spritesetpos" id="-)Vdp6N]eD{jonF~[_WY"><value name="sprite"><block type="variables_get" id="vbY:T~3Go-P}EZSg4$ah"><field name="VAR" id="@IQ3P~,h)~0]Pu:7QEPP">paddle2</field></block></value><value name="x"><shadow type="positionPicker" id="`[MIZ:FNM;%i,7{~bJ8z"><field name="index">150</field></shadow></value><value name="y"><shadow type="positionPicker" id="ELaT%G-TNSGAeXog{08W"><field name="index">60</field></shadow></value><next><block type="spritesetsetstayinscreen" id="ijbk)1T:5aUA:]f.25Lz"><value name="sprite"><block type="variables_get" id=":cAa~|O1bXO}5N=e^;l$"><field name="VAR" id="@IQ3P~,h)~0]Pu:7QEPP">paddle2</field></block></value><value name="on"><shadow type="toggleOnOff" id="V.[7{ktA#8xS0m:CUS=6"><field name="on">true</field></shadow></value><next><block type="function_call" id="#K^%.(]bHick$tmuY9fB"><mutation name="createBall" functionid="C_Z6mcDDVmgMc}{kL2@y"></mutation></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="gameupdate" id="rb.rX[2|2(!,yFM?t7bD" x="593" y="0"><comment pinned="false" h="80" w="160">Player 1 Controls (W/S)</comment><statement name="HANDLER"><block type="controls_if" id="/3p?S1,R*FU(b(Ow*],M"><value name="IF0"><shadow type="logic_boolean" id="Uz|wt]:itTH!:+c`n]io"><field name="BOOL">TRUE</field></shadow><block type="ctrlispressed" id="zILdr!)+q[XtN9z~8Is@"><field name="controller">controller.player1</field><field name="button">ControllerButton.Up</field></block></value><statement name="DO0"><block type="Sprite_blockCombine_change" id="p={Od=y36~z?x$uW`fxy"><field name="property">Sprite.y@set</field><value name="mySprite"><block type="variables_get" id="fv)7|zya-QQ3C2mD/w~f"><field name="VAR" id="OxCpRx)RT2!!Q$mhx~3G">paddle1</field></block></value><value name="value"><shadow type="math_number" id="1rbze!iP-oC,m!^mV}WH"><field name="NUM">-3</field></shadow></value></block></statement><next><block type="controls_if" id="2qwDpJcr.NC=Uav(4e*C"><value name="IF0"><shadow type="logic_boolean" id=".,%^Ly$U*6R0rPysebfc"><field name="BOOL">TRUE</field></shadow><block type="ctrlispressed" id="n-3[DTVCRUWdZ?S2*z5c"><field name="controller">controller.player1</field><field name="button">ControllerButton.Down</field></block></value><statement name="DO0"><block type="Sprite_blockCombine_change" id="]72gb;fHik_m)rZ@;_w0"><field name="property">Sprite.y@set</field><value name="mySprite"><block type="variables_get" id="~YnVG*ead?sKE@F$Pl$s"><field name="VAR" id="OxCpRx)RT2!!Q$mhx~3G">paddle1</field></block></value><value name="value"><shadow type="math_number" id="n.4JF9/{g8,B_/T|s)7{"><field name="NUM">3</field></shadow></value></block></statement></block></next></block></statement></block><block type="gameupdate" id="~BnKBFrTsB9]2aObgS^o" x="1134" y="0"><comment pinned="false" h="80" w="160">Player 2 Controls (Arrow Keys)</comment><statement name="HANDLER"><block type="controls_if" id="HpVRcFKX#2yhIh02wK#x"><value name="IF0"><shadow type="logic_boolean" id="$dOf=lJ.W)RQzpe:Yv^7"><field name="BOOL">TRUE</field></shadow><block type="ctrlispressed" id="gAim_Ly4|ytWn}cIgQ/|"><field name="controller">controller.player2</field><field name="button">ControllerButton.Up</field></block></value><statement name="DO0"><block type="Sprite_blockCombine_change" id="E5W;*Fm5H.[%ktM,|zkr"><field name="property">Sprite.y@set</field><value name="mySprite"><block type="variables_get" id="gaJQoVwSRS)IV}dIgYV="><field name="VAR" id="@IQ3P~,h)~0]Pu:7QEPP">paddle2</field></block></value><value name="value"><shadow type="math_number" id="WG:@5Fo%!w4Lp@:!Bf:a"><field name="NUM">-3</field></shadow></value></block></statement><next><block type="controls_if" id="Fn06cII1Zb8tI?rhUJp;"><value name="IF0"><shadow type="logic_boolean" id="O7T019!@XTw=Ij#,8H%U"><field name="BOOL">TRUE</field></shadow><block type="ctrlispressed" id="1ghL$/aH9Ec}GKU=r-oi"><field name="controller">controller.player2</field><field name="button">ControllerButton.Down</field></block></value><statement name="DO0"><block type="Sprite_blockCombine_change" id="_Dk^l8.VZ-}I{2o:-`ks"><field name="property">Sprite.y@set</field><value name="mySprite"><block type="variables_get" id="F83DbpYatn{[KYo/zp?9"><field name="VAR" id="@IQ3P~,h)~0]Pu:7QEPP">paddle2</field></block></value><value name="value"><shadow type="math_number" id="/10CVx+G{Oh$A3ngz{Fl"><field name="NUM">3</field></shadow></value></block></statement></block></next></block></statement></block><block type="gameupdate" id="G-(TL1!.UFgu/[OMd:xA" x="1675" y="0"><comment pinned="false" h="80" w="160">Scoring system</comment><statement name="HANDLER"><block type="controls_if" id="_d4NQbM!Is3pj$)0x^TH"><value name="IF0"><shadow type="logic_boolean" id="VO+ZCO.0|FV.Z,aqvG-#"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="T4z5=^En,Wt{V95`0H$Y"><field name="OP">LT</field><value name="A"><shadow type="math_number" id="|AoPLrr^e}.,;*J%-}UC"><field name="NUM">0</field></shadow><block type="Sprite_blockCombine_get" id="h*G%=B.{kWlGadvek`.("><field name="property">Sprite.x</field><value name="mySprite"><block type="variables_get" id="G!$!cO+SGZ:co-+g#E@~"><field name="VAR" id="zt%P)MiR0!xPc8lYt#qx">ball</field></block></value></block></value><value name="B"><shadow type="math_number" id="N+iD*F.=mxMQf,PME9?}"><field name="NUM">0</field></shadow></value></block></value><statement name="DO0"><block type="variables_change" id="Vc=!}7j`G|MYVxpSEH^C"><field name="VAR" id="78WSq-Nr--kp%LxYUEU`">player2Score</field><value name="VALUE"><shadow type="math_number" id=")5,1P(glx!5fkG0g,b~A"><field name="NUM">1</field></shadow></value><next><block type="hudsetScore" id="R/A3,(Gc;P;27qyLbosg"><value name="value"><block type="variables_get" id="62JQyk._2SO?8on}$h{*"><field name="VAR" id="78WSq-Nr--kp%LxYUEU`">player2Score</field></block></value><next><block type="spritedestroy" id="tT?j|$z)^)RffmO_/~0j"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><field name="effect">effects.spray</field><value name="sprite"><block type="variables_get" id="!q)YtWL~TS0FYNx;s(Lb"><field name="VAR" id="zt%P)MiR0!xPc8lYt#qx">ball</field></block></value><next><block type="device_pause" id="UBe;7}g.3SNj{lJG:R|H"><value name="pause"><shadow type="timePicker" id="0Ea+;p9)T1HqcPLaUf^."><field name="ms">500</field></shadow></value><next><block type="function_call" id="rVnnm-rtsf-aY]nvt;9u"><mutation name="createBall" functionid="C_Z6mcDDVmgMc}{kL2@y"></mutation></block></next></block></next></block></next></block></next></block></statement><next><block type="controls_if" id="|cz}xL?XC(d%d%1TOeor"><value name="IF0"><shadow type="logic_boolean" id=":v..!P8Gmv$F5kiIWH-B"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="#_+k`/qRLxb8;$tr{VLg"><field name="OP">GT</field><value name="A"><shadow type="math_number" id="H9|+#bApCEm=!pNZq}sQ"><field name="NUM">0</field></shadow><block type="Sprite_blockCombine_get" id="ls26afD?D+LCL+6rRcjz"><field name="property">Sprite.x</field><value name="mySprite"><block type="variables_get" id="kJ__e)kdKpo*vbNbAebR"><field name="VAR" id="zt%P)MiR0!xPc8lYt#qx">ball</field></block></value></block></value><value name="B"><shadow type="math_number" id="),JHMne4wX$qv?fr9w{h"><field name="NUM">160</field></shadow></value></block></value><statement name="DO0"><block type="variables_change" id="-@21pWtT[:k)ser~Pok1"><field name="VAR" id="jMM@?DYeWuN,z$.1YsBN">player1Score</field><value name="VALUE"><shadow type="math_number" id="HgV1ts5O:ZOc/u2BD{~F"><field name="NUM">1</field></shadow></value><next><block type="hudsetScore" id="/Bw`UM}?p+e*3Bu0apdh"><value name="value"><block type="variables_get" id="_A0}(D1~_k9e_,Ewd|.v"><field name="VAR" id="jMM@?DYeWuN,z$.1YsBN">player1Score</field></block></value><next><block type="spritedestroy" id="PG9Ev|m_Tv]`bnuR28|/"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><field name="effect">effects.spray</field><value name="sprite"><block type="variables_get" id="rIYVwmFl-4BpFMp1*0MI"><field name="VAR" id="zt%P)MiR0!xPc8lYt#qx">ball</field></block></value><next><block type="device_pause" id="VL`^%%B-E~7-W.O_M4xS"><value name="pause"><shadow type="timePicker" id="3%H?u~[7XN^K$,lLmIeI"><field name="ms">500</field></shadow></value><next><block type="function_call" id="+ZewF$Ov$`?5bwPbU*d~"><mutation name="createBall" functionid="C_Z6mcDDVmgMc}{kL2@y"></mutation></block></next></block></next></block></next></block></next></block></statement></block></next></block></statement></block><block type="spritesoverlap" id="0h$F/z(F6?epBdH_l_E(" x="0" y="797"><comment pinned="false" h="80" w="160">Ball hits paddle (Block-safe bounce)</comment><value name="HANDLER_DRAG_PARAM_sprite"><block type="argument_reporter_custom" id="EEe(tBtZDG?^2WDVM*98" deletable="false"><mutation typename="Sprite"></mutation><field name="VALUE">sprite</field></block></value><value name="kind"><shadow type="spritekind" id="XuPAVBFqZ`u[IzslTpQ?"><field name="MEMBER">Projectile</field></shadow></value><value name="HANDLER_DRAG_PARAM_otherSprite"><block type="argument_reporter_custom" id="{jaM3[hqQZL.aTU:acjD" deletable="false"><mutation typename="Sprite"></mutation><field name="VALUE">otherSprite</field></block></value><value name="otherKind"><shadow type="spritekind" id="X:Y@3kh%cr+a{LYZW[cT"><field name="MEMBER">Player</field></shadow></value><statement name="HANDLER"><block type="spritesetvel" id="q%w=:]I(-~qROLu:FP/Q"><value name="sprite"><block type="argument_reporter_custom" id=",`Q7Gf@[R,B72Y4fz411"><mutation typename="Sprite"></mutation><field name="VALUE">sprite</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="s5-/ak,tlIT{Dmmtu[G+"><field name="speed">50</field></shadow><block type="math_arithmetic" id="u==Inj2|xI,$GNhWj$DV"><field name="OP">MULTIPLY</field><value name="A"><shadow type="math_number" id="R=fg}jyh$)M!)Ek{k%.|"><field name="NUM">0</field></shadow><block type="Sprite_blockCombine_get" id="hZv.8|kxMM(keJRJAfxH"><field name="property">Sprite.vx</field><value name="mySprite"><block type="argument_reporter_custom" id=":Dh{%!tyUfd{yftEmCU@"><mutation typename="Sprite"></mutation><field name="VALUE">sprite</field></block></value></block></value><value name="B"><shadow type="math_number" id="NQtxr2_^u)tZHS4wUby]"><field name="NUM">-1</field></shadow></value></block></value><value name="vy"><shadow type="spriteSpeedPicker" id="YoZ.c+#0s-X(GQHi-3qF"><field name="speed">50</field></shadow><block type="Sprite_blockCombine_get" id="kO`jiK!Jn;~m0Eum,.Z}"><field name="property">Sprite.vy</field><value name="mySprite"><block type="argument_reporter_custom" id="vWavp2IChSA|%l!TF%(2"><mutation typename="Sprite"></mutation><field name="VALUE">sprite</field></block></value></block></value></block></statement></block><block type="function_definition" id="U*C@*u{r+uu:TA-fWf_y" x="1014" y="797"><mutation name="createBall" functionid="C_Z6mcDDVmgMc}{kL2@y"></mutation><field name="function_name">createBall</field><comment pinned="false" h="80" w="160">Bonus Challenges (Optional)
+
+- Make the ball go faster over time
+
+- Add sound when the ball hits a paddle
+
+- Add a win screen
+
+- Change paddle colors</comment><data>0</data><statement name="STACK"><block type="variables_set" id="|$z;.[VgK?h{%5%vaHdy"><field name="VAR" id="zt%P)MiR0!xPc8lYt#qx">ball</field><value name="VALUE"><shadow type="math_number" id="ks%9eC;b~)z!$|5f./s}"><field name="NUM">0</field></shadow><block type="spritescreate" id="~K-(c[B;mL/v3GksT!^2"><value name="img"><shadow type="screen_image_picker" id="E^}j7(6CM0Z/%%(%:I,t"><field name="img">img`
+. 2 2 . 
+2 2 2 2 
+2 2 2 2 
+. 2 2 . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="3V|@]0_psTd!,4V`@FaE"><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="spritesetpos" id="$sbxL:2%=v:cS`2S|Tmc"><value name="sprite"><block type="variables_get" id="*)hJjxA}Xu%B[WZ5~_Yt"><field name="VAR" id="zt%P)MiR0!xPc8lYt#qx">ball</field></block></value><value name="x"><shadow type="positionPicker" id="y+kOx]rnY5)ph!z,)IuZ"><field name="index">80</field></shadow></value><value name="y"><shadow type="positionPicker" id="nh-@#H:2Z3/D|mAam8+Y"><field name="index">60</field></shadow></value><next><block type="spritesetvel" id="}|qpma3XS;w]`sFm.0XO"><value name="sprite"><block type="variables_get" id="@,V6Q0A@(X!tR4aiWJX!"><field name="VAR" id="zt%P)MiR0!xPc8lYt#qx">ball</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="4wYo2SMtY%*lP$85Xea{"><field name="speed">50</field></shadow><block type="device_random" id="elN)MMiU-/w_L5:FcfKQ"><value name="min"><shadow type="math_number" id="#iC2]l{3.rn+,q2cA59+"><field name="NUM">-60</field></shadow></value><value name="limit"><shadow type="math_number" id="LlMrhAeXN:p+bv??N^r["><field name="NUM">60</field></shadow></value></block></value><value name="vy"><shadow type="spriteSpeedPicker" id="8Dx-V5^7HJ#4R5h^`!yq"><field name="speed">50</field></shadow><block type="device_random" id="Rh@3$|P/_%^eu+X_UrbA"><value name="min"><shadow type="math_number" id="mTAUA@N8?F-{@C=!GtX_"><field name="NUM">-40</field></shadow></value><value name="limit"><shadow type="math_number" id="^B-B.^x3:H3S%r+}BU,~"><field name="NUM">40</field></shadow></value></block></value><next><block type="spritesetsetbounceonwall" id="/-Nc%i!04wmyZSyQkRL%"><value name="sprite"><block type="variables_get" id="^YU3)u~i#?Cgu}aXRfUo"><field name="VAR" id="zt%P)MiR0!xPc8lYt#qx">ball</field></block></value><value name="on"><shadow type="toggleOnOff" id="vN5I?po!Z/^5.DcC}vPF"><field name="on">true</field></shadow></value></block></next></block></next></block></next></block></statement></block></xml>
